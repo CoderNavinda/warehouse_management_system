@@ -14,6 +14,12 @@ public class Order {
     private String customerName;
     private String customerEmail;
 
+    @Column(name = "quantity", nullable = false, columnDefinition = "integer default 1")
+    private Integer quantity;
+
+    @Column(name = "sku", nullable = false, columnDefinition = "varchar(255) default 'unknown'")
+    private String sku;
+
     @Column(nullable = false)
     private String status;
 
@@ -81,4 +87,21 @@ public class Order {
     public void setTotalAmount(Double totalAmount) {
         this.totalAmount = totalAmount;
     }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getSku() {
+        return sku;
+    }
+
+    public void setSku(String sku) {
+        this.sku = sku;
+    }
+
 }

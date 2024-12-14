@@ -8,14 +8,20 @@ package com.navinda.wms_inventory_service.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "inventory_items_new")
 public class InventoryItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false, unique = true)
     private String sku;
+
+    @Column(nullable = false)
     private int quantity;
+
+    @Column
     private String location;
 
     // Getters and setters

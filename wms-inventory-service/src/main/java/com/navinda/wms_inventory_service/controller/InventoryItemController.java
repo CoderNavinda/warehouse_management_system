@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/inventory")
@@ -26,5 +27,20 @@ public class InventoryItemController {
     public ResponseEntity<List<InventoryItem>> getAllInventory() {
         List<InventoryItem> inventory = inventoryService.getAllInventory();
         return new ResponseEntity<>(inventory, HttpStatus.OK);
+    }
+
+    @GetMapping("/check/{sku}/{quantity}")
+    public ResponseEntity<Boolean> checkInventory(@PathVariable String sku,
+            @PathVariable int quantity) {
+        boolean isAvailable = inventoryService.isStockAvailable(sku, quantity);
+        return ResponseEntity.ok(isAvailable);
+    }
+
+    @PutMapping("/reduce")
+    public ResponseEntity<Void> reduceInventory(@RequestBody Map<String, Integer> stockRequest) {
+        String sku = String.valueOf(stockRequest.get("sku"));
+        int quantity = stockRequest.get("quantity");
+        inventoryService.reduceStock(sku, quantity);
+        return ResponseEntity.ok().build();
     }
 }

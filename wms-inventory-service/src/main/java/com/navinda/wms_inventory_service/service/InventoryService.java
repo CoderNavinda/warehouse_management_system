@@ -20,4 +20,19 @@ public class InventoryService {
     public List<InventoryItem> getAllInventory() {
         return inventoryRepository.findAll();
     }
+
+    public boolean isStockAvailable(String sku, int quantity) {
+        InventoryItem item = inventoryRepository.findBySku(sku);
+        return item != null && item.getQuantity() >= quantity;
+    }
+
+    public void reduceStock(String sku, int quantity) {
+        InventoryItem item = inventoryRepository.findBySku(sku);
+        if (item != null && item.getQuantity() >= quantity) {
+            item.setQuantity(item.getQuantity() - quantity);
+            inventoryRepository.save(item);
+        } else {
+            throw new IllegalArgumentException("Insufficient stock");
+        }
+    }
 }

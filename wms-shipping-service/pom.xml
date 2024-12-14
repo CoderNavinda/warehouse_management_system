@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.2</version>
+		<version>3.3.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.navinda</groupId>
-	<artifactId>wms-inventory-service</artifactId>
+	<artifactId>wms-shipping-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>wms-inventory-service</name>
+	<name>wms-shipping-service</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -55,27 +55,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
-    <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter</artifactId>
-        <version>5.9.3</version>
-        <scope>test</scope>
-    </dependency>
-    <dependency>
-        <groupId>org.mockito</groupId>
-        <artifactId>mockito-core</artifactId>
-        <version>4.11.0</version>
-        <scope>test</scope>
-    </dependency>
-    <dependency>
-        <groupId>org.mockito</groupId>
-        <artifactId>mockito-junit-jupiter</artifactId>
-        <version>4.11.0</version>
-        <scope>test</scope>
-    </dependency>
-
-
 	</dependencies>
 
 	<build>
