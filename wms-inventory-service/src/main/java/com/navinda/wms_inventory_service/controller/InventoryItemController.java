@@ -37,9 +37,9 @@ public class InventoryItemController {
     }
 
     @PutMapping("/reduce")
-    public ResponseEntity<Void> reduceInventory(@RequestBody Map<String, Integer> stockRequest) {
+    public ResponseEntity<Void> reduceInventory(@RequestBody Map<String, Object> stockRequest) {
         String sku = String.valueOf(stockRequest.get("sku"));
-        int quantity = stockRequest.get("quantity");
+        int quantity = (int) stockRequest.get("quantity");
         inventoryService.reduceStock(sku, quantity);
         return ResponseEntity.ok().build();
     }
