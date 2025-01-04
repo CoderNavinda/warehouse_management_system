@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "WmsApiGatewayApplication",
+            "request": "launch",
+            "mainClass": "com.navinda.wms_api_gateway.WmsApiGatewayApplication",
+            "projectName": "wms-api-gateway"
+        },
+        {
+            "type": "java",
+            "name": "WmsInventoryServiceApplication",
+            "request": "launch",
+            "mainClass": "com.navinda.wms_inventory_service.WmsInventoryServiceApplication",
+            "projectName": "wms-inventory-service"
+        },
+        {
+            "type": "java",
+            "name": "WmsOrderServiceApplication",
+            "request": "launch",
+            "mainClass": "com.navinda.wms_order_service.WmsOrderServiceApplication",
+            "projectName": "wms-order-service"
+        },
+        {
+            "type": "java",
+            "name": "WmsShippingServiceApplication",
+            "request": "launch",
+            "mainClass": "com.navinda.wms_shipping_service.WmsShippingServiceApplication",
+            "projectName": "wms-shipping-service"
+        }
+    ]
+}

@@ -15,4 +15,9 @@ public class FallbackController {
     public String orderFallback() {
         return "Order Service is currently unavailable. Please try again later.";
     }
+
+    @GetMapping("/shippingFallback")
+    public String shippingFallback() {
+        return "Shipping Service is currently unavailable. Please try again later.";
+    }
 }
