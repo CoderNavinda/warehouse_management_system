@@ -18,12 +18,11 @@ public class Shipment {
     private String carrier;
 
     @Column(nullable = false)
-    private String status; // e.g., Pending, Shipped, Delivered
+    private String status; // Pending, Shipped, Delivered
 
     private LocalDate shippingDate;
     private LocalDate estimatedDeliveryDate;
 
-    // Getters and Setters
     public Long getId() {
         return id;
     }

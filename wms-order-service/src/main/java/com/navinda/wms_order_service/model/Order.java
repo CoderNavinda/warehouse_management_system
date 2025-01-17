@@ -31,7 +31,6 @@ public class Order {
     @Column(nullable = false)
     private Double totalAmount;
 
-    // Getters and Setters
     public Long getId() {
         return id;
     }

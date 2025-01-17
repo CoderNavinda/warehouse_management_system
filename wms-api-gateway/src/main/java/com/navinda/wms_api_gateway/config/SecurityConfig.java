@@ -14,10 +14,10 @@ public class SecurityConfig {
     @Bean
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
         return http
-                .csrf(csrf -> csrf.disable()) // Disable CSRF for APIs
+                .csrf(csrf -> csrf.disable())
                 .authorizeExchange(exchanges -> exchanges
-                        .pathMatchers("/auth/**").permitAll() // Permit authentication routes
-                        .pathMatchers("/inventory/**", "/orders/**", "/shipments/**").authenticated()
+                        .pathMatchers("/auth/**").permitAll()
+                        .pathMatchers("/inventory/**", "/orders/**", "/shipments/**", "/invoices/**").authenticated()
                         .anyExchange().permitAll())
                 .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults()))
                 .build();

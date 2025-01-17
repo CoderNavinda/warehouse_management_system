@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface InventoryItemRepository extends JpaRepository<InventoryItem, Long> {
-    // Custom query methods if necessary
+
     InventoryItem findBySku(String sku);
 }

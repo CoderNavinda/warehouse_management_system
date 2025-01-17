@@ -24,7 +24,6 @@ public class InventoryItem {
     @Column
     private String location;
 
-    // Getters and setters
     public Long getId() {
         return id;
     }

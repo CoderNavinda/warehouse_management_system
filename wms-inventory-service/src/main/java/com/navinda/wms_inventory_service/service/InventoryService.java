@@ -33,6 +33,7 @@ public class InventoryService {
             inventoryRepository.save(item);
         } else {
             throw new IllegalArgumentException("Insufficient stock");
+
         }
     }
 }

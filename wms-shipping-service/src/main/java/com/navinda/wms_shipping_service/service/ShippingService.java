@@ -19,7 +19,7 @@ public class ShippingService {
     public Shipment createShipment(Long orderId, String carrier, LocalDate estimatedDeliveryDate) {
         Shipment shipment = new Shipment();
         shipment.setOrderId(orderId);
-        shipment.setTrackingNumber(UUID.randomUUID().toString()); // Generate a unique tracking number
+        shipment.setTrackingNumber(UUID.randomUUID().toString());
         shipment.setCarrier(carrier);
         shipment.setStatus("Pending");
         shipment.setShippingDate(LocalDate.now());

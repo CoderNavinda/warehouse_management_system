@@ -32,23 +32,6 @@ build/
 ### VS Code ###
 .vscode/
 
-
-
-###
-src/main/resources/application.properties
-src/main/resources/application.yml
-
-# Ignore Maven Wrapper files
-mvnw
-mvnw.cmd
-
-
-../credentials.txt
-credentials.txt
-*.txt
-
-
-
 ###
 src/main/resources/application.properties
 src/main/resources/application.yml
