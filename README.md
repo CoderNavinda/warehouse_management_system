@@ -2,18 +2,14 @@
 
 This project aims to manage the processes of a warehouse using a software based on micro services architecture.This project has functionalities for inventory management, order processing, billing and invoicing, shipping, and notifications.
 
----
-
 ## Features
 
-- **Built using Spring Boot using microservices architecture**
-- **Kafka for communication between services.**
+- **Built using Spring Boot for microservices architecture**
+- **Kafka for Event Driven communication between services.**
 - **Keycloak for authentication and API Gateway for routing.**
 - **PostgreSQL based relational database.**
 - **Sends notifications for events like order creation and payment completion.**
 - **Handles invoices and payments.**
-
----
 
 ## Tech Stack
 
@@ -21,8 +17,6 @@ This project aims to manage the processes of a warehouse using a software based 
 - **Frameworks**: Spring Boot, Spring Cloud
 - **Database**: PostgreSQL
 - **Other**: Apache Kafka, keycloack, docker
-
----
 
 ## How to Run
 
